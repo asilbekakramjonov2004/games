@@ -7,7 +7,7 @@ const selfGuard = require("../middleware/guards/self.guard");
 
 const router = require("express").Router();
 
-router.post("/", clientGuard, addNewClient);
+router.post("/", addNewClient);
 router.post("/login", loginClient);
 router.get("/", adminGuard, findAllClients);
 router.get("/activate/:link", activateClientAccount);
